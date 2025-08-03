@@ -1,0 +1,290 @@
+/* ================= BASE SETUP ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f2f5f9;
+  color: #2c3e50;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 4rem 2rem;
+}
+
+/* ================= ABOUT SECTION ================= */
+.about-section {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1 1 50%;
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.about-image img {
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= SKILLS SECTION ================= */
+.skills-section {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #2c3e50;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease-in-out;
+  cursor: default;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* ================= PROJECTS SECTION ================= */
+.projects {
+  background-color: #ffffff;
+  padding: 80px 20px;
+}
+
+.projects h2 {
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.project {
+  background: #fefefe;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project h3 {
+  font-size: 1.6rem;
+  color: #007bff;
+}
+
+.project p {
+  color: #555;
+  margin: 12px 0;
+}
+
+.project .btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.project .btn:hover {
+  background-color: #0056b3;
+}
+
+/* ================= RESUME SECTION ================= */
+.resume-section {
+  background-color: #f4f4f4;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.resume-section h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.resume-section p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* ================= CONTACT SECTION ================= */
+.contact-section {
+  padding: 60px 20px;
+  background-color: #111;
+  color: #eee;
+  text-align: center;
+}
+
+.contact-details p,
+.social-links a {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #00bfff;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 220px;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .project,
+  .skill-card {
+    margin-bottom: 20px;
+  }
+}
+footer {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #0077b5;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff4d4d;
+}
